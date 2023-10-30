@@ -52,7 +52,7 @@ Our mission is to develop solutions for the project tasks independently. Copying
 - Each file should have no more than 5 functions
 - The standard library is at our disposal
 - Function prototypes will be included in a header file named `binary_trees.h`
-- Don't forget to push the header file
+- Don't forget to push the header file.
 - Guard your header files with include guards
 
 **GitHub**

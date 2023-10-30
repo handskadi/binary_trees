@@ -10,7 +10,7 @@
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
 	/* BT Node  declation + DT */
-	binary_tree_t *newNode;
+	binary_tree_t *n_node;
 
 	/* Memory allocation for n_node var*/
 	n_node = (binary_tree_t *)malloc(sizeof(binary_tree_t));
