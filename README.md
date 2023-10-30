@@ -110,7 +110,7 @@ You can execute the compiled program using the following command:
 ./mk_c_tests/mynode
 ```
 
-For more infor please contact us at: contact@mohamedkadi.com
+For more info please contact us at: contact@mohamedkadi.com
 
 
 
