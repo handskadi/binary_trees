@@ -110,6 +110,4 @@ To match the examples in the tasks, you are provided with a print function. This
 The specific tasks for this project are provided separately.
 
 Good luck with your project! If you have any questions, feel free to reach out to the project leads or your peers for assistance.
-```
-
-You can paste this content into your `README.md` file in your project repository.
+```.
