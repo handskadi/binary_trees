@@ -1,23 +1,42 @@
-#!/BIN/bash
+#!/bin/bash
 
-# Check if the correct number of arguments is provided
-if [ "$#" -ne 3 ]; then
-	  echo "Usage: $0 <var1> <var2> <var3>"
-	    exit 1
-fi
+# Initialize variables for the options and output filename
+C_FILES="binary_tree_print.c"  # Include binary_tree_print.c by default
+OUTPUT="output"
 
-# Assign command line arguments to variables
-var1="$1"
-var2="$2"
-var3="$3"
+# Set the default flags for gcc
+GCC_FLAGS="-Wall -Wextra -Werror -pedantic"
 
-# Compile the code with the given arguments
-gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c "$var1" "$var2" -o mk_c_tests/"$var3"
+# Loop through the command-line arguments
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -c)
+      # If the -c flag is provided, add the following argument as a C file
+      shift
+      C_FILES="$C_FILES $1"
+      ;;
+    -o)
+      # If the -o flag is provided, set the output filename to the following argument
+      shift
+      OUTPUT="$1"
+      ;;
+    *)
+      # If it's not a flag, assume it's a C file
+      C_FILES="$C_FILES $1"
+      ;;
+  esac
+  shift
+done
 
-if [ -f "mk_c_tests/$var3" ]; then
-	echo "Compilation successful! The executable file is located at mk_c_tests/$var3"
-	echo "You can use it as follows:"
-	echo "./mk_c_tests/$var3"
+# Build the gcc command
+GCC_COMMAND="gcc $GCC_FLAGS $C_FILES -o $OUTPUT"
+
+# Compile the C files
+eval $GCC_COMMAND
+
+# Check if the compilation was successful
+if [ $? -eq 0 ]; then
+  echo "Compilation successful."
 else
-	echo "Compilation failed. Please check your source files and try again."
+  echo "Compilation failed."
 fi
