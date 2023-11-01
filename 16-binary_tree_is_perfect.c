@@ -61,7 +61,7 @@ size_t bt_mk_size(const binary_tree_t *tree)
 }
 
 /**
- * bt_mk_height - measures the height 
+ * bt_mk_height - measures the height
  * @tree: tree to measure Hight
  *
  * Return: height
