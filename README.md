@@ -85,7 +85,7 @@ struct binary_tree_s
 typedef struct binary_tree_s binary_tree_t;
 ```
 
-## Auto Compilation
+## Auto Compilation Usage
 To simplify the compilation process, you can use the provided mkcompiler.sh script. Here's how to use it:
 
 Navigate to your project directory, for example:
@@ -94,20 +94,16 @@ Navigate to your project directory, for example:
 vagrant@ubuntu-focal:~/binary_trees$
 ```
 
-Run the mkcompiler.sh script with the relevant source files and the desired executable name. For example, to compile 0-main.c and 0-binary_tree_node.c into an executable called mynode, use the following command:
+To compile specific tasks related to the project, follow these steps:
 
-```
-./mkcompiler.sh 0-main.c 0-binary_tree_node.c mynode
-```
-If the compilation is successful, you will receive a confirmation message:
+1. Open a terminal.
+2. Navigate to the project directory.
+3. Run the `mkcompiler.sh` script by entering the task number when prompted.
 
-```
-Compilation successful! The executable file is located at mk_c_tests/mynode
-```
-You can execute the compiled program using the following command:
+Example:
 
-```
-./mk_c_tests/mynode
+```bash
+./mkcompiler.sh
 ```
 
 For more info please contact us at: contact@mohamedkadi.com
